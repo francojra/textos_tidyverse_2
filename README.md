@@ -1,4 +1,4 @@
-# Trabalhando com textos 2 - Pacote tidyverse
+# Trabalhando com textos 2 
 
 #### Autoria do script: Jeanne Franco
 #### Data do script: 30/04/22 
