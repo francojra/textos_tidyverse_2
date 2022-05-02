@@ -58,3 +58,9 @@ view(freq100)
 
 ggplot(freq100) +
   geom_col(aes(x = Palavra, y = n))
+
+ggplot(freq100) +
+  geom_col(aes(y = n, x = reorder(Palavra, -n)), fill = "Steelblue") +
+  labs(y = "Frequência", x = "Palavras do livro Dom Casmurro") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+             
