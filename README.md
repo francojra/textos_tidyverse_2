@@ -1,4 +1,4 @@
-# Trabalhando com textos 2 
+# Trabalhando com textos 
 
 #### Autoria do script: Jeanne Franco
 #### Data do script: 30/04/22 
