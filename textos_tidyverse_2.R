@@ -32,3 +32,24 @@ grep("Bentinho", casmurro) # Posições onde está a palavra "Bentinho"
 
 length(grep("Bentinho", casmurro)) # Quantas vezes são citadas as palavras
 length(grep("Capitú", casmurro))
+
+# Análise do texto - Tidytext --------------------------------------------------------------------------------------------------------------
+
+casmurro <- data.frame("Linha" = 1:length(casmurro), "Texto" = casmurro)
+view(casmurro)
+
+casmurro <- unnest_tokens(casmurro, Palavra, Texto) # Coluna palavra substitui coluna 
+# texto
+view(casmurro)
+
+## Frequência de palavras
+
+freq <- casmurro %>%
+  count(Palavra, sort = TRUE)
+view(freq)
+
+## As 100 palavras mais frequentes
+
+freq100 <- filter(freq, n > 100) %>%
+  arrange(desc(n))
+view(freq100)
