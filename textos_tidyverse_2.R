@@ -53,3 +53,8 @@ view(freq)
 freq100 <- filter(freq, n > 100) %>%
   arrange(desc(n))
 view(freq100)
+
+# Gráfico de frequência --------------------------------------------------------------------------------------------------------------------
+
+ggplot(freq100) +
+  geom_col(aes(x = Palavra, y = n))
