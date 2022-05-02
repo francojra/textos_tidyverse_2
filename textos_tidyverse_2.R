@@ -26,6 +26,9 @@ stopwords("pt") # Indica algumas palavras em português ("pt") que não tem muit
 
 casmurro <- removeWords(casmurro, stopwords("pt")) # Remove palavras desnecessárias
 
-# Análise do texto -------------------------------------------------------------------------------------------------------------------------
+# Análise do texto - Mineração -------------------------------------------------------------------------------------------------------------------------
 
-grep("Bentinho", casmurro)
+grep("Bentinho", casmurro) # Posições onde está a palavra "Bentinho"
+
+length(grep("Bentinho", casmurro)) # Quantas vezes são citadas as palavras
+length(grep("Capitú", casmurro))
