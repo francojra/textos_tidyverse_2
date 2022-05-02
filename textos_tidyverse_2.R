@@ -9,6 +9,7 @@
 library(tidyverse)
 library(tidytext) # Pacote para análise de textos
 library(tm) # Pacote para text mining
+library(wordcloud) # Nuvem de palavras
 
 # Carregando texto -------------------------------------------------------------------------------------------------------------------------
 
@@ -63,4 +64,7 @@ ggplot(freq100) +
   geom_col(aes(y = n, x = reorder(Palavra, -n)), fill = "Steelblue") +
   labs(y = "Frequência", x = "Palavras do livro Dom Casmurro") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
-             
+
+# Nuvem de palavras ------------------------------------------------------------------------------------------------------------------------
+
+wordcloud::wordcloud(freq$Palavra, freq$n, min.freq = 100)             
